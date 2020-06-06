@@ -40,7 +40,7 @@ room['foyer'].connections["east"] = room['narrow']
 room['overlook'].connections["south"] = room['foyer']
 room['narrow'].connections["west"] = room['foyer']
 room['narrow'].connections["north"] = room['treasure']
-room['treasure'].connections["ssouth"] = room['narrow']
+room['treasure'].connections["south"] = room['narrow']
 
 
 def printRoomMessage():
