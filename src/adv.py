@@ -26,8 +26,7 @@ the distance, but there is no way across the chasm.""", item['key']),
 to north. The smell of gold permeates the air."""),
 
     'treasure': RoomClass("Treasure Chamber", """You've found the long-lost treasure
-chamber! Sadly, it has already been completely emptied by
-earlier adventurers. The only exit is to the south.""", item['treasure']),
+chamber!""", item['treasure']),
 }
 
 
@@ -97,6 +96,8 @@ while player_variable.is_playing:
             if player_variable.current_room.connections[player_move[0]] is not None:
                 player_variable.move(player_move[0])
                 printRoomMessage()
+            else:
+                print(f"{player_variable.player_name} can't go north")
         elif player_move[0] in ["q", "quit"]:
             print("Thanks for playing!")
             player_variable.is_playing = False
